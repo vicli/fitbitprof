@@ -1,0 +1,32 @@
+/* CSS declarations go here */
+
+body {
+	width: 850px;
+	margin: 0 auto;
+}
+
+/* GENERIC TILE STYLE */
+
+.tile {
+	margin:10px;
+	padding: 10px;
+	border: 2px solid black;
+	border-radius: 5px;
+	float:left;
+	display: inline-block;
+}
+
+.one-block{
+	width: 250px;
+	height:300px;
+}
+
+.two-block {
+	width: 500px;
+	height:300px;
+}
+
+.three-block {
+	width: 800px;
+	height: 300px;
+}
