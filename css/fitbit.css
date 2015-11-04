@@ -1,32 +1,72 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,700,300italic,100italic,400italic,900,700italic,900italic);
+
 /* CSS declarations go here */
 
 body {
-	width: 850px;
 	margin: 0 auto;
+	margin-left: 15%;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    background-color: #2f3f43;
+	/*margin-right:8%;*/
 }
 
-/* GENERIC TILE STYLE */
+/* GENERIC STYLEs */
 
-.tile {
-	margin:10px;
-	padding: 10px;
-	border: 2px solid black;
-	border-radius: 5px;
-	float:left;
-	display: inline-block;
+.title-container{
+	margin-top: 60px;
+	color: #fff;
 }
 
-.one-block{
-	width: 250px;
-	height:300px;
+.title-container .title-name{
+	font-size: 28px;
+	font-weight:400;
+	width: 80%;
+	text-align: right;
+}
+.main-container{
+}
+.panel {
+	margin-top: 20px;
+	height: 100%;
+	position: relative;
+	float: left;
 }
 
-.two-block {
-	width: 500px;
-	height:300px;
+.panel div {
+	height: 100vh;
 }
 
-.three-block {
-	width: 800px;
-	height: 300px;
+/* SIDE PANEL */
+.side-panel {
+	width: 20%;
+	color: #fff;
+	background-color: #3ba3ac;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.side-panel-contents{
+	padding-top: 40px;
+}
+	
+.side-panel-contents li {
+	list-style-type: none;
+	background-color: #3ba3ac;
+	width: 100%;
+	padding: 15px 5px 15px 30px;
+	border-bottom: 1px #3ba3ac solid;
+}
+
+.side-panel-contents li:hover{
+	background-color: #267880;
+	cursor: pointer;
+}
+/* MAIN PANEL */
+
+.main-panel {
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background-color: #fff;
+	width: 60%;
 }

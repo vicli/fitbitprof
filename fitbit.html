@@ -3,27 +3,18 @@
 </head>
 
 <body>
-	<div class="tile-body">
-		<div class="side-panel">
-			helo
-			{{#each items}}
-				{{> item}}
-
-			{{/each}}
-		</div>
-		<div class="main-panel">
-		</div>
-
-		
-
-<!-- 
-		{{> dailyTile}}
-		{{> heartRateTile}}
-		{{> weeklyTile}} -->
+	<div class="title-container">
+		<div class="title-name">hi victoria</div>
 	</div>
-  
+	<div class="main-container">
+		<div class="panel side-panel">
+			{{> side_panel}}
+		</div>
+
+
+		<div class="panel main-panel">
+			{{> main_panel}}
+		</div>  
+	</div>
+	
 </body>
-<template name="item">
-	hi
-	{{text}}
-</template>

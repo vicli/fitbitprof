@@ -1,30 +1,19 @@
-Items = new Mongo.Collection("items");
+MenuItems = new Mongo.Collection("menuitems");
 
 if (Meteor.isClient) {
   // counter starts at 0
-  Session.setDefault('counter', 0);
-
-  Template.hello.helpers({
-    counter: function () {
-      return Session.get('counter');
-    }
-  });
-
-  Template.hello.events({
-    'click button': function () {
-      // increment the counter when button is clicked
-      Session.set('counter', Session.get('counter') + 1);
-    }
-  });
-  Template.body.helpers({
+  if (MenuItems.find({}).count() === 0) {
+       
+  }
+  Template.side_panel.helpers({
     items: function(){
-      Items.find({});
+      return MenuItems.find({});
     }
   });
 }
 
 if (Meteor.isServer) {
   Meteor.startup(function () {
-    // code to run on server at startup
+  
   });
 }
