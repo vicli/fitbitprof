@@ -1,9 +1,11 @@
 <template name="side_panel">
 	<div class="side-panel-contents">
-		<ul class="menu-items">
+		<!-- <ul class="menu-items"> -->
 			{{#each items}}
-	        	<li id="{{cssId}}">{{name}}</li>
+	        	<a href="#"><li data-template="{{cssId}}">{{name}}</li></a>
 	    	{{/each}}
-		</ul>
+		<!-- </ul> -->
 	</div>
+	
+
 </template>	

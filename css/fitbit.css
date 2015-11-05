@@ -11,6 +11,10 @@ body {
 	/*margin-right:8%;*/
 }
 
+a {
+	text-decoration: none;
+	color:inherit;
+}
 /* GENERIC STYLEs */
 
 .title-container{
@@ -33,7 +37,7 @@ body {
 	float: left;
 }
 
-.panel div {
+.side-panel div, .main-panel{
 	height: 100vh;
 }
 
@@ -52,8 +56,9 @@ body {
 	
 .side-panel-contents li {
 	list-style-type: none;
-	background-color: #3ba3ac;
-	width: 100%;
+	margin: 0;
+	/*background-color: #3ba3ac;*/
+	min-width: 100%;
 	padding: 15px 5px 15px 30px;
 	border-bottom: 1px #3ba3ac solid;
 }
@@ -69,4 +74,18 @@ body {
 	border-bottom-right-radius: 10px;
 	background-color: #fff;
 	width: 60%;
+	/*height: 700px;*/
+}
+
+.main-panel-container {
+	padding-left: 10%;
+	padding-top: 10%;
+}
+.main-panel-container .profile-photo {
+	width: 150px;
+	height: 150px;
+	border: 2px solid black;
+	border-radius:75px;
+	margin-left: 25%;
+	margin-right: auto;
 }

@@ -7,14 +7,17 @@
 		<div class="title-name">hi victoria</div>
 	</div>
 	<div class="main-container">
-		<div class="panel side-panel">
-			{{> side_panel}}
-		</div>
-
-
-		<div class="panel main-panel">
-			{{> main_panel}}
-		</div>  
+		{{> panels}}
 	</div>
 	
 </body>
+<template name="panels">
+	<div class="panel side-panel">
+		{{> side_panel}}
+	</div>
+
+
+	<div class="panel main-panel" id="main-panel">
+		{{> Template.dynamic template=tab }}
+	</div>  
+</template>
