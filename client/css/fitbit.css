@@ -1,0 +1,134 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,700,300italic,100italic,400italic,900,700italic,900italic);
+
+/* CSS declarations go here */
+
+body {
+	margin: 0 auto;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+	/*background-color: #eee;*/
+
+    /*margin-left: 10%;*/
+    /*background-color: #2f3f43;*/
+	/*margin-right:8%;*/
+}
+
+a {
+	text-decoration: none;
+	color:inherit;
+}
+a:hover{
+	color:#3ba3ac;
+}
+
+.center{
+	text-align: center;
+}
+/* GENERIC STYLEs */
+
+.title-container{
+	margin-top: 60px;
+	color: #fff;
+}
+
+.title-container .title-name{
+	font-size: 28px;
+	font-weight:400;
+	width: 80%;
+	text-align: right;
+}
+.main-container{
+	margin-left: 15%;
+}
+.panel {
+	margin-top: 20px;
+	height: 100%;
+	position: relative;
+	float: left;
+	margin-bottom: 50px;
+}
+
+/* SIDE PANEL */
+.side-panel {
+	margin-top: 40px;
+}
+
+.side-panel-contents{
+	padding-top: 40px;
+}
+	
+.side-panel-contents li {
+	list-style-type: none;
+}
+
+/* MAIN PANEL */
+
+.main-panel {
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background-color: #fff;
+	width: 60%;
+}
+
+.main-panel-container {
+	padding-left: 10%;
+	padding-top: 10%;
+	margin-bottom: 50px;
+}
+.main-panel-container .profile-photo {
+	width: 150px;
+	height: 150px;
+	border: 2px solid black;
+	border-radius:75px;
+	margin-left: 25%;
+	margin-right: auto;
+}
+
+.personal_info textarea {
+	/*width: 100%;*/
+}
+
+/* CENTER PANEL */
+.center-panel {
+	background-color: #fff;
+	border: 1px solid #4ac1c0;
+	border-radius: 5px;
+	width: 400px;
+	height: 360px;
+	padding: 20px;
+	display: block;
+ 	margin-left: auto;
+  	margin-right: auto;
+  	margin-top: 100px;
+}
+
+/* FORM CSS */
+.form table{
+	text-align: left;
+	display: block;
+	width: 350px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.form tr{
+	font-weight: 300;
+}
+
+.form td{
+	padding: 10px;
+}
+
+.login body {
+}
+.login input.error{
+    background-color:#FFE5E5;
+}
+/* DEVICES PAGES*/
+
+.devices p{
+	font-weight: 400;
+}
+.devices .subtext{
+	font-size: 12px;
+}

@@ -1,0 +1,36 @@
+<template name="login">
+	<div class="center-panel ">
+		<form class="login form">
+			<br/>
+			<h2 class="center">Login</h2>
+			<table>
+				<tr>
+					<td>Email:</td>
+					<td>
+						<div class="ui input">
+						  <input type="email" name="email" required>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Password: </td>
+					<td>
+						<div class="ui input">
+							<input type="password" name="password" required>
+						</div>
+					</td>
+				</tr>			
+			</table>
+			<br/>
+			<div class="center">
+				<button class="ui primary button" value="login">Login</button>
+				<br/>
+				<br/>
+				<p>No account? <a href="{{pathFor route='register'}}">Register here</a></p>
+			</div>
+	        <!-- <p><input type="submit" value="login"></p> -->
+	    </form>
+		
+	</div>
+	
+</template>

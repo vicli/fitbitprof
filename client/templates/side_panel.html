@@ -1,0 +1,20 @@
+<template name="side_panel">
+	<div class="side-panel-contents">
+		<div class="ui secondary vertical pointing menu">
+		<a class="item" id="personal_info"><li data-template="personal_info">Personal Info</li></a>
+		<a class="item" id="devices"><li data-template="devices">Devices</li></a>
+		<div class="menu">
+			{{#each devices}}
+					{{> side_panel_item}}
+			{{/each}}
+		</div>
+		<br/>
+		<a href="#" class="item logout">Logout</a>
+	</div>
+	</div>
+
+</template>	
+
+<template name="side_panel_item">
+	<a class="item" id="{{cssId}}" style="margin-left: 15px;"><li data-template="{{cssId}}">{{name}}</li></a>
+</template>

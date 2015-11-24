@@ -1,0 +1,33 @@
+<template name="register">
+	<div class="center-panel">
+	    <form class="register form">
+	    	<br/>
+			<h2 class="center">Register</h2>
+	        <table>
+				<tr>
+					<td>Email:</td>
+					<td>
+						<div class="ui input">
+						  <input type="email" name="email" required>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Password: </td>
+					<td>
+						<div class="ui input">
+							<input type="password" name="password" required>
+						</div>
+					</td>
+				</tr>			
+			</table>
+			<br/>
+			<div class="center">
+				<button class="ui primary button" value="register">Register</button>
+				<br/>
+				<br/>
+				<p>Have an account already? <a href="{{pathFor route='login'}}">Login here</a></p>
+			</div>
+	    </form>
+	</div>
+</template>

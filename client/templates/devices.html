@@ -1,0 +1,71 @@
+<template name="devices">
+	<div class="main-panel-container devices">
+		<h2>Device Name</h2>
+		<form name="device-form" id="device-form">
+			<table>
+				<tr>
+					<td >Last Updated: {{device.lastUpdate}}</td>
+					<td >Battery Level: {{device.battLevel}}</td>
+					<td >Firmware Version: {{device.version}}</td>
+				</tr>	
+				<p class="maintext">Daily Goal Progress</p>
+				<p class="subtext">Get notified when you reach your goal</p>
+				<tr>
+					<td> <select id="goal-progress">
+							<option value="steps">Steps</option>
+							<option value="distance">Distance</option>
+							<option value="calories">Calories Burned</option>
+							<option value="floors">Floors Climbed</option>
+
+						</select>
+					</td>
+				</tr>	
+				<p class="maintext">Quick View Gesture</p>
+				<p class="subtext">Bring your Surge up to a viewing position to activate. </p>
+				<tr>
+					<td><input type="radio" name="quick-view" value="quick-view-on" /> On
+						<input type="radio" name="quick-view" value="quick-view-off" /> Off
+					</td>
+				</tr>	
+				<p class="maintext">Clock Display</p>
+				<p class="subtext">Select a style for your clock.</p>
+				<tr>
+					<td><input type="radio" name="clock" value="clock-flare" /> Flare
+						<input type="radio" name="clock" value="clock-orbit" /> Orbit
+						<input type="radio" name="clock" value="clock-digital" /> Digital
+						<input type="radio" name="clock" value="clock-analog" /> Analog
+					</td>
+				</tr>
+				<p class="maintext">Dominant Hand</p>
+				<p class="subtext">Which hand do you wear your surge on?</p>
+				<tr>
+					<td> <select id="dominant-hand">
+							<option value="dominant">Dominant</option>
+							<option value="nondominant">Non-dominant</option>
+						</select>
+					</td>
+				</tr>
+				<p class="maintext">Dominant Hand</p>
+				<p class="subtext">Which hand do you wear your surge on?</p>
+				<tr>
+					<td> <select id="dominant-hand">
+							<option value="dominant">Dominant</option>
+							<option value="nondominant">Non-dominant</option>
+						</select>
+					</td>
+				</tr>	
+				<p class="maintext">Heart Rate</p>
+				<p class="subtext">Set heart rate measuring frequency</p>
+				<tr>
+					<td> <select id="heartrate">
+							<option value="heartrate-on">On</option>
+							<option value="heartrate-off">Off</option>
+							<option value="heartrate-auto">Auto</option>
+
+						</select>
+					</td>
+				</tr>
+			</table>	
+		</form>
+	</div>
+</template>	

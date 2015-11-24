@@ -1,0 +1,21 @@
+<template name="home">
+
+
+<div class="main-container">
+	{{> panels}}
+</div>
+</template>
+
+<template name="panels">
+<!-- 	<div class="title-container">
+		<div class="title-name">hi victoria</div>
+	</div> -->
+	<div class="panel side-panel">
+		{{> side_panel}}
+	</div>
+
+
+	<div class="panel main-panel" id="main-panel">
+		{{> Template.dynamic template=tab }}
+	</div>  
+</template>
