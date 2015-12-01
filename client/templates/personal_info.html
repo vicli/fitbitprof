@@ -1,144 +1,152 @@
 <template name="personal_info" >
 	<div class="main-panel-container personal_info">
-		{{#with userInfo}}
-		
-		<!-- <p class="profile-photo"></p>  -->
-		<form name="personal-info-form" id="personal-info-form" class="ui form">
-			<h3><i class="user icon"></i>Personal Info</h3>
-			<div class="two fields">
+		{{#if subscription}}
+			{{#with userInfo}}
+			<!-- <p class="profile-photo"></p>  -->
+			<form name="personal-info-form" id="personal-info-form" class="ui form">
+				<h3><i class="user icon"></i>Personal Info</h3>
+				<div class="two fields">
+					<div class="field">
+					    <label>Name</label>
+					    <input type="text" name="name" value="{{name}}">
+					 </div>
+					 <div class="field">
+					    <label>Nickname</label>
+					    <input type="text" name="nickname" value="{{nickname}}">
+					 </div>
+				</div>
 				<div class="field">
-				    <label>Name</label>
-				    <input type="text" name="name" value="{{name}}">
-				 </div>
-				 <div class="field">
-				    <label>Nickname</label>
-				    <input type="text" name="nickname" value="{{nickname}}">
-				 </div>
-			</div>
-			<div class="field">
-			    <label>Email</label>
-			    <input type="text" name="email" value="{{email}}">
-			</div>
-			<div class="field">
-			    <label>Address</label>
-			    <input type="text" name="address" value="{{address}}">
-			</div>
-			<div class="field">
-			    <label>About Me</label>
-			    <textarea rows="2" name="about_me">{{about_me}}</textarea>
-			</div>
-
-			<div class="ui section divider"></div>
-
-			<h3><i class="heartbeat icon"></i>Body Stats</h3>
-			<div class="field">
-			    <label>Gender</label>
-			    <select class="ui dropdown" name="gender">
-			    	<option selected="{{isEqual gender 'm'}}" value="male">Male</option>
-			    	<option selected="{{isEqual gender 'f'}}" value="female">Female</option>
-				</select>
-			</div>
-			<div class="two fields">
+				    <label>Email</label>
+				    <input type="text" name="email" value="{{email}}">
+				</div>
 				<div class="field">
-					<label>Height</label>
-					<div class="two fields">
+				    <label>Address</label>
+				    <input type="text" name="address" value="{{address}}">
+				</div>
+				<div class="field">
+				    <label>About Me</label>
+				    <textarea rows="2" name="about_me">{{about_me}}</textarea>
+				</div>
+
+				<div class="ui section divider"></div>
+
+				<h3><i class="heartbeat icon"></i>Body Stats</h3>
+				<div class="field">
+				    <label>Gender</label>
+				    <select class="ui dropdown" name="gender">
+				    	<option selected="{{isEqual gender 'm'}}" value="male">Male</option>
+				    	<option selected="{{isEqual gender 'f'}}" value="female">Female</option>
+					</select>
+				</div>
+				<div class="two fields">
+					<div class="field">
+						<label>Height</label>
+						<div class="two fields">
+						    <div class="ui right labeled input">
+							  <input type="text" name="height_ft" value="{{height_ft}}">
+							  <div class="ui basic label">
+							    ft
+							  </div>
+							</div>
+							<div class="ui right labeled input">
+							  <input type="text" name="height_in" value="{{height_in}}">
+							  <div class="ui basic label">
+							    in
+							  </div>
+							</div>
+						</div>
+					    
+					 </div>
+					 <div class="field">
+					    <label>Weight</label>
 					    <div class="ui right labeled input">
-						  <input type="text" name="height_ft" value="{{height_ft}}">
+						  <input type="text" name="weight" value="{{weight}}">
 						  <div class="ui basic label">
-						    ft
+						    lb
 						  </div>
 						</div>
-						<div class="ui right labeled input">
-						  <input type="text" name="height_in" value="{{height_in}}">
-						  <div class="ui basic label">
-						    in
-						  </div>
-						</div>
+					 </div>
+				</div>
+				<div class="two fields">
+					<div class="field">
+					    <label>Birthday</label>
+					    <input type="text" name="birthday" value="{{birthday}}">
 					</div>
-				    
-				 </div>
-				 <div class="field">
-				    <label>Weight</label>
-				    <div class="ui right labeled input">
-					  <input type="text" name="weight" value="{{weight}}">
-					  <div class="ui basic label">
-					    lb
-					  </div>
+					<div class="field">
+					    <label>Heart Rate Zone</label>
+					    <select class="ui dropdown" name="hrt">
+					    	<option selected="{{isEqual hrt 'default'}}" value="default">Defaut (3 zone)</option>
+					    	<option selected="{{isEqual hrt 'custom'}}" value="custom">Custom 1 zone)</option>
+						</select>
 					</div>
-				 </div>
-			</div>
-			<div class="two fields">
-				<div class="field">
-				    <label>Birthday</label>
-				    <input type="text" name="birthday" value="{{birthday}}">
 				</div>
-				<div class="field">
-				    <label>Heart Rate Zone</label>
-				    <select class="ui dropdown" name="hrt">
-				    	<option selected="{{isEqual hrt 'default'}}" value="default">Defaut (3 zone)</option>
-				    	<option selected="{{isEqual hrt 'custom'}}" value="custom">Custom 1 zone)</option>
-					</select>
-				</div>
-			</div>
 
-			<div class="ui section divider"></div>
+				<div class="ui section divider"></div>
 
-			<h3><i class="info circle icon"></i>Units</h3>
-			<div class="three fields">
-				<div class="field" >
-				    <label>Length</label>
-				    <select class="ui dropdown" name="length_unit">
-				    	<option selected="{{isEqual length_unit 'ftin'}}" value="ftin">Feet, Inches</option>
-				    	<option selected="{{isEqual length_unit 'centimeters'}}" value="centimeters">Centimeters</option>
-					</select>
+				<h3><i class="info circle icon"></i>Units</h3>
+				<div class="three fields">
+					<div class="field" >
+					    <label>Length</label>
+					    <select class="ui dropdown" name="length_unit">
+					    	<option selected="{{isEqual length_unit 'ftin'}}" value="ftin">Feet, Inches</option>
+					    	<option selected="{{isEqual length_unit 'centimeters'}}" value="centimeters">Centimeters</option>
+						</select>
+					</div>
+					<div class="field">
+					    <label>Weight</label>
+					    <select class="ui dropdown" name="weight_unit">
+					    	<option selected="{{isEqual weight_unit 'lb'}}" value="lb">Pounds</option>
+					    	<option selected="{{isEqual weight_unit 'st'}}" value="st">Stones</option>
+					    	<option selected="{{isEqual weight_unit 'kg'}}" value="kg">Kilograms</option>
+						</select>
+					</div>
+					<div class="field">
+					    <label>Water</label>
+					    <select class="ui dropdown" name="water_unit">
+					    	<option selected="{{isEqual water_unit 'ml'}}" value="ml">Milliters (mL) </option>
+					    	<option selected="{{isEqual water_unit 'oz'}}" value="oz">Fluid Ounces (oz)</option>
+					    	<option selected="{{isEqual water_unit 'cup'}}" value="cup">Cups</option>
+						</select>
+					</div>
 				</div>
-				<div class="field">
-				    <label>Weight</label>
-				    <select class="ui dropdown" name="weight_unit">
-				    	<option selected="{{isEqual weight_unit 'lb'}}" value="lb">Pounds</option>
-				    	<option selected="{{isEqual weight_unit 'st'}}" value="st">Stones</option>
-				    	<option selected="{{isEqual weight_unit 'kg'}}" value="kg">Kilograms</option>
-					</select>
-				</div>
-				<div class="field">
-				    <label>Water</label>
-				    <select class="ui dropdown" name="water_unit">
-				    	<option selected="{{isEqual water_unit 'ml'}}" value="ml">Milliters (mL) </option>
-				    	<option selected="{{isEqual water_unit 'oz'}}" value="oz">Fluid Ounces (oz)</option>
-				    	<option selected="{{isEqual water_unit 'cup'}}" value="cup">Cups</option>
-					</select>
-				</div>
-			</div>
 
-			<div class="ui section divider"></div>
+				<div class="ui section divider"></div>
 
-			<h3><i class="setting icon"></i> Time </h3>
+				<h3><i class="setting icon"></i> Time </h3>
 
-			<div class="three fields">
-				<div class="field">
-				    <label>Week starts on:</label>
-				    <select class="ui dropdown" name="week_start">
-				    	<option selected="{{isEqual week_start 's'}}" value="sunday">Sunday</option>
-				    	<option selected="{{isEqual week_start 'm'}}" value="monday">Monday</option>
-					</select>
+				<div class="three fields">
+					<div class="field">
+					    <label>Week starts on:</label>
+					    <select class="ui dropdown" name="week_start">
+					    	<option selected="{{isEqual week_start 's'}}" value="sunday">Sunday</option>
+					    	<option selected="{{isEqual week_start 'm'}}" value="monday">Monday</option>
+						</select>
+					</div>
+					<div class="field">
+					    <label>Clock</label>
+					    <select class="ui dropdown" name="clock">
+					    	<option selected="{{isEqual clock '12'}}" value="12">12 hr</option>
+					    	<option selected="{{isEqual clock '24'}}" value="24">24 hr</option>
+						</select>
+					</div>
+					<div class="field">
+					    <label>Timezone</label>
+					    <select class="ui dropdown" name="timezone">
+					    	<option selected="{{isEqual timezone 'gmt08'}}" value="gmt08">(GMT-08:00) Pacific Time (US/Canada)</option>
+					    	<option selected="{{isEqual water_unit 'gmt09'}}" value="gmt09"> Other</option>
+					    	
+						</select>
+					</div>
 				</div>
-				<div class="field">
-				    <label>Clock</label>
-				    <select class="ui dropdown" name="clock">
-				    	<option selected="{{isEqual clock '12'}}" value="12">12 hr</option>
-				    	<option selected="{{isEqual clock '24'}}" value="24">24 hr</option>
-					</select>
-				</div>
-				<div class="field">
-				    <label>Timezone</label>
-				    <select class="ui dropdown" name="timezone">
-				    	<option selected="{{isEqual timezone 'gmt08'}}" value="gmt08">(GMT-08:00) Pacific Time (US/Canada)</option>
-				    	<option selected="{{isEqual water_unit 'gmt09'}}" value="gmt09"> Other</option>
-				    	
-					</select>
-				</div>
-			</div>
-		</form>
-		{{/with}}
+				<br/>
+				<button class="ui right floated primary button">
+					Save
+				</button>
+				<button class="ui right floated button">
+					Cancel
+				</button>
+			</form>
+			{{/with}}
+		{{/if}}
 	</div>
 </template>	

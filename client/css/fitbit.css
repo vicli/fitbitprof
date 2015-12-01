@@ -21,6 +21,10 @@ a:hover{
 	color:#3ba3ac;
 }
 
+.ui.form .field > label.subtext{
+	font-weight: 300;
+}
+
 .center{
 	text-align: center;
 }

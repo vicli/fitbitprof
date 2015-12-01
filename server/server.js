@@ -4,20 +4,24 @@ if (Devices.find({}).count() === 0) {
     Devices.insert({
         'name' : 'Surge',
         'product_id': '21',
-        'cssId':'devices'
+        'cssId':'devices',
+        'user_id': 'yHDTpQQmgRv3uPCex',
+        'goal_progress': 'steps',
+        'quick_view':'on'
     });
 
     Devices.insert({
         'name': 'Flex',
         'product_id': '17',
-        'cssId': 'devices'
+        'cssId': 'devices',
+        'user_id': 'yHDTpQQmgRv3uPCex'
     });
 }
 
 UserInfo.remove({});
 if(UserInfo.find({}).count() === 0){
 	UserInfo.insert({
-	'user_id' : 'MEGtDQqLrfozjTjt6',
+	'user_id' : 'yHDTpQQmgRv3uPCex',
 	'email' : 'vli@fitbit.com',
 	'name': 'Victoria Li',
 	'nickname': '',
@@ -37,3 +41,17 @@ if(UserInfo.find({}).count() === 0){
 	'timezone':'gmt08'
 })
 }
+
+// Publications
+Meteor.publish('userInfo', function(){
+	var userId = this.userId, 
+	userInfo = UserInfo.find({user_id: userId});
+	if(userInfo) {
+		return userInfo;
+	}
+	return this.ready();
+});
+
+Meteor.publish('devices', function(){
+	return Devices.find({});
+})

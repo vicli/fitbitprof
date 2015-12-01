@@ -1,8 +1,13 @@
+Template.side_panel.onCreated( function() {
+	this.devices = this.subscribe('devices');
+});
+
 Template.side_panel.helpers({
 	items: function(){
 	 	return MenuItems.find({});
 	},
 	devices: function(){
+		console.log("Deivces", Devices.find({}));
 		return Devices.find({});
 	}
 });
@@ -43,18 +48,26 @@ Template.side_panel_item.onRendered(function () {
 
 Template.panels.onCreated(function(){
 	currentTab = new ReactiveVar("personal_info");
-	activeSet = new ReactiveVar(false);
+	activeSet  = new ReactiveVar(false);
 })
 
 Template.panels.helpers({
 	tab: function() {
-	  return currentTab.get();
+		console.log("current tab", currentTab.get());
+		return currentTab.get();
 	},
 	template: function() {
-	  return 'personal_info';
+		console.log("in personal info");
+		return 'personal_info';
 	}
 });
 
 Template.personal_info.onCreated(function(){
 	mainPanel = Template.instance();
+})
+
+Template.side_panel_item.events({
+	'click': function(event) {
+		console.log("Clicked", event.target);
+	}
 })
